@@ -1,0 +1,22 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+#*.tfvars
+
+# terraform lock hc
+.terraform.lock.hcl
+
+# .swp vim files
+*.swp
+*.swo
+
+# Do not save secrets in git
+secrets.auto.tfvars
+**/env/*.secrets.tfvars
+
+.DS_Store
