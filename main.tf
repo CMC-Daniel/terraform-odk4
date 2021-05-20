@@ -104,11 +104,11 @@ resource "esxi_guest" "BOOTSTRAP" {
 resource "esxi_guest" "CONTROL" {
   count = 3
   guest_name = "${lower(format("%s-%s", var.hostname_prefix, "control-plane"))}-${format("%01d", count.index + 1)}"
-  disk_store = var.disk_store
+  disk_store = "datastore2"
   boot_disk_size = 120
 
   memsize = "16384"
-  numvcpus = 2
+  numvcpus = 4
 #  clone_from_vm = "rhel-7.9"
   
   power = "off"
